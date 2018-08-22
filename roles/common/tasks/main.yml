@@ -13,6 +13,9 @@
   register: hostname
   tags: hostname
 
+- name: Set GPU_MEM to minimum (16MB)
+  shell: "raspi-config nonint do_memory_split 16"
+  
 - name: Enabling cgroup options at boot
   copy:
     src: cmdline.txt
