@@ -39,7 +39,6 @@ Also, it's cheaper than a year of GKE. Plus, why not run Kubernetes in your home
 
 ## Recommendations
 
-* Since Raspbian Lite is being used it's recommended that the video memory of the Raspberry Pi 3s be [set to its lowest setting](https://www.raspberrypi.org/documentation/configuration/config-txt/memory.md) (16 MB).
 * Setup SSH key pairs so your password is not required every time Ansible runs
 
 # Stand Up Your Kubernetes Cluster
@@ -108,7 +107,7 @@ Did something go wrong? Nodes fail some process or not joined to the cluster? Br
 Try the process again from the beginning:
 
 ```
-ansible-playbook cluster.yml
+ansible-playbook cleanup.yml
 ```
 Wait for everything to run and then start again with:
 
